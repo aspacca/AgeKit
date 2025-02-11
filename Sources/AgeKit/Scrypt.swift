@@ -77,7 +77,7 @@ extension Age {
         private let password: Data
         private var maxWorkFactor: Int
 
-        init?(password: String) {
+        public init?(password: String) {
             if password.isEmpty {
                 return nil
             }
