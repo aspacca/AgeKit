@@ -74,10 +74,10 @@ extension Age {
 extension Age {
     /// A password-based identity.
     public struct ScryptIdentity: Identity {
-        let password: Data
-        var maxWorkFactor: Int
+        private let password: Data
+        private var maxWorkFactor: Int
 
-        init?(_ password: String) {
+        init?(password: String) {
             if password.isEmpty {
                 return nil
             }
